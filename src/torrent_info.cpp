@@ -1832,6 +1832,11 @@ namespace {
 	}
 #endif
 
+	sha1_hash torrent_info::info_hash() const noexcept
+	{
+		return m_info_hash.get_best();
+	}
+
 TORRENT_VERSION_NAMESPACE_3_END
 
 }
